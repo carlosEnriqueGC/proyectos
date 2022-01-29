@@ -140,8 +140,8 @@ public class menu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 40, 50));
 
-        suma.setBackground(new java.awt.Color(51, 0, 51));
-        suma.setText("lo");
+        suma.setBackground(new java.awt.Color(255, 255, 255));
+        suma.setText("+");
         suma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sumaActionPerformed(evt);
@@ -208,6 +208,7 @@ public class menu extends javax.swing.JFrame {
         });
         getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 60, 60));
 
+        jButton11.setBackground(new java.awt.Color(255, 153, 0));
         jButton11.setText("C");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,6 +217,7 @@ public class menu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 60, 60));
 
+        jButton12.setBackground(new java.awt.Color(255, 153, 0));
         jButton12.setText("CE");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
