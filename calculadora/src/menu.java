@@ -141,7 +141,7 @@ public class menu extends javax.swing.JFrame {
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 40, 50));
 
         suma.setBackground(new java.awt.Color(51, 0, 51));
-        suma.setText("+");
+        suma.setText("lo");
         suma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sumaActionPerformed(evt);
