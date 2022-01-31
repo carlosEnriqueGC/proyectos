@@ -52,8 +52,10 @@ public class menu extends javax.swing.JFrame {
         punto = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         salir = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        borra = new javax.swing.JButton();
+        borratodo = new javax.swing.JButton();
+        log = new javax.swing.JButton();
+        potencia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -208,23 +210,38 @@ public class menu extends javax.swing.JFrame {
         });
         getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 60, 60));
 
-        jButton11.setBackground(new java.awt.Color(255, 153, 0));
-        jButton11.setText("C");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        borra.setBackground(new java.awt.Color(255, 153, 0));
+        borra.setText("C");
+        borra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                borraActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 60, 60));
+        getContentPane().add(borra, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 60, 60));
 
-        jButton12.setBackground(new java.awt.Color(255, 153, 0));
-        jButton12.setText("CE");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        borratodo.setBackground(new java.awt.Color(255, 153, 0));
+        borratodo.setText("CE");
+        borratodo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                borratodoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 60, 60));
+        getContentPane().add(borratodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 60, 60));
+
+        log.setText("LOG");
+        log.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logActionPerformed(evt);
+            }
+        });
+        getContentPane().add(log, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 60, 60));
+
+        potencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                potenciaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(potencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 60, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -308,7 +325,7 @@ public class menu extends javax.swing.JFrame {
             
     }//GEN-LAST:event_puntoActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void borraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borraActionPerformed
        
         String memo;
         memo=pantalla.getText();
@@ -319,13 +336,13 @@ public class menu extends javax.swing.JFrame {
         }        
         
         
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_borraActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void borratodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borratodoActionPerformed
             
         pantalla.setText("");
         
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_borratodoActionPerformed
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
         // TODO add your handling code here:
@@ -377,6 +394,29 @@ public class menu extends javax.swing.JFrame {
        System.exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
+    private void logActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logActionPerformed
+        // TODO add your handling code here:
+         if(!pantalla.getText().equals("")){
+        memoria1=pantalla.getText();
+        signo="log";
+        pantalla.setText("");
+        
+        }
+
+        
+    }//GEN-LAST:event_logActionPerformed
+
+    private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
+        // TODO add your handling code here:
+         if(!pantalla.getText().equals("")){
+        memoria1=pantalla.getText();
+        signo="pow";
+        pantalla.setText("");
+        
+        }
+        
+    }//GEN-LAST:event_potenciaActionPerformed
+
     public static String calculadora(String memoria1, String memoria2, String signo){
     
     Double resultado=0.0;
@@ -400,6 +440,18 @@ public class menu extends javax.swing.JFrame {
       
     
     }
+    if(signo.equals("log")){
+      resultado= (Math.log10(Double.parseDouble(memoria1)) / Math.log10(Double.parseDouble(memoria2)));
+      
+     
+    }
+    
+    if(signo.equals("pow")){
+      resultado= Math.pow(Double.parseDouble(memoria1),Double.parseDouble(memoria2));
+      
+     
+    }
+    
     
     respuesta = resultado.toString();
     
@@ -468,12 +520,12 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton borra;
+    private javax.swing.JButton borratodo;
     private javax.swing.JButton division;
     private javax.swing.JButton igual;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -483,8 +535,10 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton log;
     private javax.swing.JButton multi;
     private javax.swing.JLabel pantalla;
+    private javax.swing.JButton potencia;
     private javax.swing.JButton punto;
     private javax.swing.JButton resta;
     private javax.swing.JButton salir;
