@@ -62,8 +62,9 @@ public class menu extends javax.swing.JFrame {
         potencia = new javax.swing.JButton();
         borra1 = new javax.swing.JButton();
         lab = new javax.swing.JLabel();
-        fondo = new javax.swing.JLabel();
         pantalla2 = new javax.swing.JLabel();
+        lab1 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
@@ -310,15 +311,11 @@ public class menu extends javax.swing.JFrame {
 
         lab.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lab.setForeground(new java.awt.Color(255, 255, 255));
-        lab.setText("Basica");
+        lab.setText("(Beta)");
         lab.setAlignmentX(10.0F);
         lab.setAlignmentY(0.9F);
         lab.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 40));
-
-        fondo.setBackground(new java.awt.Color(51, 51, 51));
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 420));
+        getContentPane().add(lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 80, 40));
 
         pantalla2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         pantalla2.setForeground(new java.awt.Color(255, 255, 255));
@@ -326,6 +323,18 @@ public class menu extends javax.swing.JFrame {
         pantalla2.setAlignmentY(0.9F);
         pantalla2.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(pantalla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 160, 50));
+
+        lab1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lab1.setForeground(new java.awt.Color(255, 255, 255));
+        lab1.setText("Basica");
+        lab1.setAlignmentX(10.0F);
+        lab1.setAlignmentY(0.9F);
+        lab1.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(lab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 40));
+
+        fondo.setBackground(new java.awt.Color(51, 51, 51));
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo.jpg"))); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -638,6 +647,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lab;
+    private javax.swing.JLabel lab1;
     private javax.swing.JButton log;
     private javax.swing.JButton multi;
     private javax.swing.JLabel pantalla;
