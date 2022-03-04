@@ -15,6 +15,20 @@ CREATE TABLE IF NOT EXISTS usuario (
   password VARCHAR(25)NOT NULL,
   PRIMARY KEY (id_usuario) )
 ENGINE = InnoDB CHARACTER SET = latin1;
+
+CREATE TABLE `vendedor` (
+  `id_vendedor` int(11) NOT NULL,
+  `nombreVendedor` varchar(60) NOT NULL,
+  `direVendedor` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `aplicacion` (
+  `id_aplicacion` int(11) NOT NULL,
+  `nombreAplicacion` varchar(60) NOT NULL,
+  `estadoAplicacion` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 CREATE TABLE IF NOT EXISTS bitacora (
   id_bitacora INT NOT NULL AUTO_INCREMENT,
   accion VARCHAR(60) NOT NULL,
